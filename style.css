@@ -373,6 +373,9 @@ article .icon {
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 1.25rem;  /* 或 1.3rem，略大 */
+  font-weight: 600;    /* 更清晰突出 */
+  text-align: center;  /* 居中显示 */
 }
 
 .project-btn {
