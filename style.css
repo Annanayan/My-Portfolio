@@ -271,6 +271,9 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .about-details-container {
@@ -301,6 +304,8 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  max-width: 400px;  /* 这个很重要，限制每个项目的最大宽度 */
+  min-width: 300px;  /* 设置最小宽度 */
 }
 
 .section-container {
@@ -373,14 +378,25 @@ article .icon {
 .project-title {
   margin: 1rem;
   color: black;
-  font-size: 1.25rem;  /* 或 1.3rem，略大 */
-  font-weight: 600;    /* 更清晰突出 */
-  text-align: center;  /* 居中显示 */
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4; /* 改善长标题的行间距 */
 }
 
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  font-size: 0.9rem; /* 稍微调小字体以适应更长的标签 */
+  padding: 0.8rem 1.2rem; /* 调整内边距以适应新标签 */
+  width: auto; /* 让按钮宽度自适应内容 */
+  min-width: 8rem; /* 设置最小宽度保持美观 */
+}
+
+/* 针对单个按钮的项目，调整按钮容器居中 */
+.details-container .btn-container {
+  justify-content: center;
+  flex-wrap: wrap; /* 允许按钮换行（如果需要） */
 }
 
 /* CONTACT */
